@@ -57,3 +57,26 @@ time.sleep(n)<br />
 #Time模組中的sleep，必須足足等待n秒鐘，稱為顯性等待<br />
 implicitly_wait(n)<br />
 #Selenium模組中的隱性等待，最多等n秒鐘，如果前一事件提早完成就直接進行下一個動作<br /><br />
+
+
+#來小小實作吧 <br/>
+from selenium import webdriver <br/>
+import time <br/> <br/> <br/>
+
+
+driver = webdriver.Chrome() <br/>
+driver.get('http://www.google.com/xhtml'); # 前往 google 首頁 <br/>
+driver.maximize_window() <br/>
+time.sleep(5) # 等待5秒 <br/> <br/> <br/>
+
+#user = driver.find_element_by_class('gb_kb').text <br/>
+#print(user) <br/> <br/>
+
+size = driver.find_element_by_name('q').size <br/>
+print(size) <br/>
+search_box = driver.find_element_by_name('q') # 取得搜尋框 <br/>
+search_box.send_keys('ChromeDriver') # 在搜尋框內輸入 'ChromeDriver' <br/>
+search_box.submit() # 令 chrome driver 按下 submit <br/>
+time.sleep(5) <br/> <br/>
+
+#driver.quit() # 關閉 chromedriver <br/>
