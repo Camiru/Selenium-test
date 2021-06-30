@@ -57,7 +57,7 @@ time.sleep(n)<br />
 #Time模組中的sleep，必須足足等待n秒鐘，稱為顯性等待<br />
 implicitly_wait(n)<br />
 #Selenium模組中的隱性等待，最多等n秒鐘，如果前一事件提早完成就直接進行下一個動作<br /><br />
-# driver.quit與 driver.close差異在於close關閉當時執行的視窗, quit則是關閉所有視窗<br /><br />
+driver.quit與 driver.close差異在於close關閉當時執行的視窗, quit則是關閉所有視窗<br /><br />
 
 ## 來小小實作吧 - 在搜尋列輸入ChromeDriver後搜尋<br/>
 from selenium import webdriver <br/>
