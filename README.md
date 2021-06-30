@@ -59,15 +59,14 @@ implicitly_wait(n)<br />
 #Selenium模組中的隱性等待，最多等n秒鐘，如果前一事件提早完成就直接進行下一個動作<br /><br />
 
 
-## 來小小實作吧 <br/>
+## 來小小實作吧 - 在搜尋列輸入ChromeDriver後搜尋<br/>
 from selenium import webdriver <br/>
-import time <br/> <br/> <br/>
-
+import time <br/> <br/> 
 
 driver = webdriver.Chrome() <br/>
 driver.get('http://www.google.com/xhtml'); # 前往 google 首頁 <br/>
 driver.maximize_window() <br/>
-time.sleep(5) # 等待5秒 <br/> <br/> <br/>
+time.sleep(5) # 等待5秒 <br/> <br/> 
 
 #user = driver.find_element_by_class('gb_kb').text <br/>
 #print(user) <br/> <br/>
